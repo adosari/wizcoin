@@ -1,15 +1,11 @@
 #! /usr/bin/env python3
 
+import time, cProfile
 
-class Test:
-    def test1():
-        print("test1")
+def add_up_numbers():
+    total = 0
+    for i in range(1, 1000001):
+        total += i
+    return total
 
-    def test2():
-        print("test2")
-
-
-Test.test1()
-
-
-Test.test2()
+cProfile.run('add_up_numbers()')
